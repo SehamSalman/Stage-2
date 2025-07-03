@@ -1,162 +1,125 @@
-Certainly! Below is a **more professional and comprehensive English `README.md`** for your **Capstone 2** project. It includes a full project explanation, technologies, challenges, and outcomes—suitable for presentation on GitHub, in portfolios, or during evaluations.
+# 🧠 Learning Management System (LMS) — Data Management & Governance
+
+A project focused on organizing and managing educational data for the LMS platform by applying data governance and data quality frameworks. It follows best practices such as DAMA-DMBOK and aligns with PDPL (Personal Data Protection Law) standards.
 
 ---
 
-# 📚 Smart Learning Management Platform – Capstone Project 2
+## 📂 Project Structure
 
-## 🎯 Project Summary
+- **Business Requirements**  
+  Documented stakeholder needs and expectations from the LMS data.
 
-This project focuses on **enhancing data quality, governance, and analytics** within a Learning Management System (LMS). The goal is to build a robust, cloud-based data infrastructure that ensures accurate, consistent, and compliant educational data, empowering data-driven decisions and improving the learner experience.
+- **Data Sources & Ingestion**  
+  Data was ingested from PostgreSQL, MySQL, and CSV files using Airbyte.
 
+- **Data Profiling & Quality Rules**  
+  Analyzed data structure, profiled datasets, and applied custom data quality rules.
 
----
+- **Metadata Management**  
+  Created a business glossary with term classifications (CDE, PII), and uploaded it to a metadata management platform.
 
-## 💡 Project Objective
-
-With the growing reliance on e-learning platforms, educational data has become a key asset for understanding learner behavior and optimizing instructional design. However, many LMS platforms suffer from:
-
-* Inconsistent and duplicated records
-* Missing or poorly structured data
-* Lack of privacy compliance and governance
-* Limited ability to generate actionable insights
-
-This project was developed to solve those issues by integrating multiple data sources into a centralized cloud database, applying data quality rules, enforcing data governance policies (including Saudi **PDPL** compliance), and creating interactive dashboards to support strategic decision-making.
+- **Dashboards & Insights**  
+  Built dashboards to monitor attendance, student status, data quality, and overall program performance.
 
 ---
 
-## 🏗️ Architecture & Tools
+## 🏗️ System Architecture
 
-### 📥 Data Sources
+> 🖼️ **Insert your system architecture diagram here**
 
-* **PostgreSQL**: Main LMS database
-* **CSV files**: Attendance records
-* **MySQL (local)**: Phase 1 database
-
-### ⚙️ Tools & Technologies
-
-| Tool                      | Purpose                                  |
-| ------------------------- | ---------------------------------------- |
-| **Airbyte**               | Data extraction and loading              |
-| **SQL + Python**          | Data profiling, cleaning, transformation |
-| **AWS RDS**               | Centralized cloud database               |
-| **Google Sheets**         | Documenting data rules and metadata      |
-| **Power BI / Dashboards** | Data visualization                       |
+```markdown
+![Architecture Overview](images/architecture.png)
+````
 
 ---
 
-## 🔄 Project Workflow
+## 📊 Data Quality Dashboard
 
-```mermaid
-graph TD;
-    A[Data Collection] --> B[Loading to AWS RDS];
-    B --> C[Initial Profiling];
-    C --> D[Cleaning & Transformation];
-    D --> E[Data Quality Rules];
-    E --> F[Governance & PDPL Compliance];
-    F --> G[Analytics & Dashboards];
+Visualizes data issues such as missing values, duplicates, invalid formats, and overall compliance with quality rules.
+
+> 🖼️ **Insert your data quality dashboard screenshot here**
+
+```markdown
+![Data Quality Dashboard](images/data_quality_dashboard.png)
 ```
 
 ---
 
-## 📊 Data Profiling & Quality
+## 📘 Glossary & Term Classification
 
-Initial profiling was performed using SQL and Python scripts to identify:
+A business glossary was developed including:
 
-* Null and duplicate values
-* Distinct value counts
-* Field-level validations (e.g., email format, name structure)
+* Clear term definitions
+* Classification for sensitive data like PII (Personally Identifiable Information) and CDE (Critical Data Elements)
+* Mapping of terms to relevant datasets and business processes
 
-We also developed **data quality rules** for critical columns like:
+> 🖼️ **Insert your glossary/tool screenshot here**
 
-* `score` → must be between 0 and 100
-* `question_ids` → must follow defined format
-* `filename` → must use naming convention like `project_topic_task.zip`
-
-[📎 [View Data Quality Rules Sheet](https://docs.google.com/spreadsheets/d/13jJYKG20iVjhwGZUHFfKGo6n6o8t2R84CqljN4IIcow/edit?gid=639572487#gid=639572487)](https://github.com/SehamSalman/Stage-2/blob/main/rules%20and%20observation.png)
-
----
-
-## 🧹 Data Cleaning & Transformation
-
-* Removed duplicates with `DISTINCT`
-* Filled missing values where applicable
-* Standardized date/time formats using `DATE_FORMAT`
-* Trimmed spaces and corrected naming conventions
-* Merged datasets using SQL `UNION` into a unified schema `lms_dev`
-
----
-
-## 🔐 Data Governance & PDPL Compliance
-
-### Key Governance Principles
-
-* **Data Quality**: Regular validation for accuracy, completeness, consistency
-* **Transparency**: Full metadata documentation
-* **Data Integrity**: Access control via roles and permissions
-
-### PDPL Compliance
-
-* **Masking PII**: Emails and names are obfuscated
-* **User Rights**: Support for data access, correction, deletion
-* **Data Minimization**: Only necessary data is retained
-* **Regular Audits**: To ensure compliance with Saudi data privacy laws
-
-#### Example – Data Masking:
-
-| Original Email        | Masked Email          |
-| --------------------- | --------------------- |
-| `Marc.Kane@gmail.com` | `M********@gmail.com` |
-
----
-
-## 📈 Analytics & Dashboards
-
-We created interactive dashboards to visualize:
-
-* Student enrollment and completion
-* Attendance trends by cohort
-* Program-wise progress and distribution
-* Learning formats (online vs. onsite)
-
-📸 *Example Figures (replace with actual links):*
-
-```
-![Enrollment Dashboard](figures/enrollment_dashboard.png)
-![Attendance Distribution](figures/attendance_distribution.png)
-![Progress by Program](figures/progress_by_program.png)
+```markdown
+![Glossary Example](images/glossary.png)
 ```
 
 ---
 
-## ⚠️ Challenges Encountered
+## ✅ Data Quality Rules
 
-* Integrating structured and semi-structured data from **three different sources**
-* Unifying **attendance formats** for Client 1 and Client 2
-* Resolving **inconsistent student status** fields across multiple tables
-* Enforcing **privacy rules** and **governance policies** throughout the pipeline
+Examples of applied data quality rules:
 
----
+* Mandatory field checks (e.g., student ID, attendance date)
+* Format validations (e.g., email, phone numbers)
+* Logic rules (e.g., graduation date should be after enrollment)
 
-## ✅ Outcomes
+> 🖼️ **Insert your data rule list screenshot here**
 
-* Built a **centralized database** using AWS RDS
-* Cleaned, transformed, and validated **900+ student records**
-* Implemented **data quality checks and PDPL-compliant masking**
-* Developed dashboards that provide **actionable educational insights**
+```markdown
+![Data Quality Rules](images/data_quality_rules.png)
+```
 
 ---
 
-## 🙏 Acknowledgments
+## 📈 Analytical Dashboards
 
-We extend our sincere thanks to the **Data Management & Governance Bootcamp** team for their guidance and support throughout this project. The capstone allowed us to apply real-world data governance, quality assurance, and compliance in a meaningful educational context.
+Dashboards created to monitor:
+
+* **Student Status** (Current, Withdrawn, Graduated)
+* **Attendance Tracking**
+* **Program Metrics** (e.g., pass/fail rates, completion ratios)
+
+> 🖼️ **Insert your Power BI or Excel dashboard screenshots here**
+
+```markdown
+![Trainee Status Dashboard](images/trainee_status_dashboard.png)
+```
 
 ---
 
-## 👥 Team Members
+## 🧰 Tools & Technologies
 
-* Seham Salman
-* Nawal Mohammed
-* Maha Sultan
-* Sarah Al-Zahrani
-* Mthayel Almutairi
+| Category            | Tools Used                 |
+| ------------------- | -------------------------- |
+| ETL / Ingestion     | Airbyte, Python            |
+| Visualization       | Power BI, Excel            |
+| Metadata Management | DataHub / OpenMetadata     |
+| Storage             | AWS RDS, PostgreSQL, MySQL |
+| Governance          | DAMA-DMBOK, PDPL           |
+
+---
+
+## 👥 Team
+
+> Add team members and roles if applicable
+> Example:
+>
+> * **Sara A.** — Data Engineer
+> * **Ahmed B.** — BI Developer
+> * **Reem C.** — Data Governance Lead
+
+---
+
+## 📎 Attachments
+
+* `docs/` — Project documentation
+* `presentation/` — Final project presentation slides
+* `requirements/` — Business requirements and user stories
+
 
