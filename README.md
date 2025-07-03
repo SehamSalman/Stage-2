@@ -72,7 +72,7 @@ We also developed **data quality rules** for critical columns like:
 * `question_ids` → must follow defined format
 * `filename` → must use naming convention like `project_topic_task.zip`
 
-📎 [View Data Quality Rules Sheet](https://docs.google.com/spreadsheets/d/13jJYKG20iVjhwGZUHFfKGo6n6o8t2R84CqljN4IIcow/edit?gid=639572487#gid=639572487)
+[📎 [View Data Quality Rules Sheet](https://docs.google.com/spreadsheets/d/13jJYKG20iVjhwGZUHFfKGo6n6o8t2R84CqljN4IIcow/edit?gid=639572487#gid=639572487)](https://github.com/SehamSalman/Stage-2/blob/main/rules%20and%20observation.png)
 
 ---
 
