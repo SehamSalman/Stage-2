@@ -90,7 +90,8 @@ The table below describes the key attributes from the `users` table, their busin
 
 > 💡 Masking for sensitive fields like `email`, `id`, and `student_id` is done using star characters (`*****`) to protect personally identifiable information (PII).
 
-![Data Masking Example](images/masking_example.png)
+![Data Masking Example](https://raw.githubusercontent.com/SehamSalman/Stage-2/main/images/Masking%20Example.png)
+
 
 ---
 
