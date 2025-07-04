@@ -112,49 +112,50 @@ The table summarizes:
 
 ---
 
-## 📈 Analytical Dashboards
+## 📈 Analytical Dashboard – Business Requirements
 
-Dashboards created to monitor:
+This dashboard provides an overview of key business metrics extracted from the LMS datasets.  
+It highlights performance indicators used to evaluate program scale, student attendance, and enrollment activity.
 
-* **Student Status** (Current, Withdrawn, Graduated)
-* **Attendance Tracking**
-* **Program Metrics** (e.g., pass/fail rates, completion ratios)
+### 📌 Key Insights:
 
-> 🖼️ **Insert your Power BI or Excel dashboard screenshots here**
+- 🏫 **13 Programs** are actively tracked in the system.
+- 👥 **913 Students** total, across two client groups:
+  - **Client 1**: Former students from **Stage 1**
+  - **Client 2**: Current active students
+- 🧑‍💻 **920 Users** with unique LMS accounts
+- 📊 **Attendance Distribution**:
+  - **P (79.7%) = Present**  
+  - **X (20.3%) = Absent**
+- 📉 Visual comparison of program cohorts vs total enrollments
+- 📋 Breakdown of student statuses: **Enrolled**, **Withdrawn**, and **Client-Specific Completed**
 
-```markdown
-![Trainee Status Dashboard](images/trainee_status_dashboard.png)
-```
+This dashboard supports analysis of student engagement, cohort planning, and overall program reach.
 
----
+![Business Requirements Dashboard](https://raw.githubusercontent.com/SehamSalman/Stage-2/main/images/Dashboard%20Business%20Requirements.png)
+
 
 ## 🧰 Tools & Technologies
 
-| Category            | Tools Used                 |
-| ------------------- | -------------------------- |
-| ETL / Ingestion     | Airbyte, Python            |
-| Visualization       | Power BI, Excel            |
-| Metadata Management | DataHub / OpenMetadata     |
-| Storage             | AWS RDS, PostgreSQL, MySQL |
-| Governance          | DAMA-DMBOK, PDPL           |
+| Category                 | Tools Used                                     |
+| ------------------------ | ---------------------------------------------- |
+| Data Ingestion & ETL     | Airbyte, MySQL Workbench, Google Colab         |
+| Data Storage             | AWS RDS Cloud Database                         |
+| Data Visualization       | Power BI                                       |
+| Reporting & Presentation | Google Sheets (reports), Canva (presentations) |
+| Data Governance          | Personal Data Protection Law (PDPL) Compliance |
 
----
+
 
 ## 👥 Team
 
-> Add team members and roles if applicable
-> Example:
->
-> * **Sara A.** — Data Engineer
-> * **Ahmed B.** — BI Developer
-> * **Reem C.** — Data Governance Lead
+Seham Salman, Nawal Mohammed, Maha Sultan, Sarah Alzahrani, Mathyel Al Muteriy
 
 ---
 
-## 📎 Attachments
+## 📎 Presentation File
 
-* `docs/` — Project documentation
-* `presentation/` — Final project presentation slides
-* `requirements/` — Business requirements and user stories
+[presentation/your-presentation.pdf](presentation/your-presentation.pdf)
+
 
 
