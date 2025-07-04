@@ -68,7 +68,7 @@ Visualizes data issues such as missing values, duplicates, invalid formats, and 
 > 🖼️ **Insert your data quality dashboard screenshot here**
 
 ```markdown
-![Data Quality Dashboard](images/data_quality_dashboard.png)
+![Data Quality Dashboard]([images/data_quality_dashboard.png](https://github.com/SehamSalman/Stage-2/blob/main/images/Data%20quality%20Dashboard.png))
 ```
 
 ---
