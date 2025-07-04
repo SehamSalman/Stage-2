@@ -63,25 +63,34 @@ A project focused on organizing and managing educational data for the LMS platfo
 
 ## 📊 Data Quality Dashboard
 
-This dashboard presents an overview of the data quality checks performed on the LMS datasets, including profiling metrics such as missing values, duplicates, and rule violations.
+This dashboard provides a summary of key data quality metrics calculated from the LMS datasets.  
+It highlights:
+
+- ✅ **Completeness** – percentage of non-missing data per column  
+- 🔁 **Uniqueness** – percentage of distinct values per column  
+- 📄 **Rows Processed** – total number of records analyzed  
 
 ![Data Quality Dashboard](https://raw.githubusercontent.com/SehamSalman/Stage-2/main/images/Data%20quality%20Dashboard.png)
 
 ---
 
-## 📘 Glossary & Term Classification
+## 📘 Metadata & Privacy Masking – Users Table
 
-A business glossary was developed including:
+The table below describes the key attributes from the `users` table, their business meaning, classification, and whether masking is required to ensure privacy compliance (e.g., under PDPL).
 
-* Clear term definitions
-* Classification for sensitive data like PII (Personally Identifiable Information) and CDE (Critical Data Elements)
-* Mapping of terms to relevant datasets and business processes
+| **Attribute**  | **Data Type** | **Description**                                | **Classification** | **Masking** |
+|----------------|---------------|------------------------------------------------|---------------------|-------------|
+| id             | Bigint        | Unique user identifier                         | Master Data         | ✅ Yes       |
+| role           | Text          | Role of the user (e.g., student)               | Master Data         | ❌ No        |
+| email          | Text          | Email address of the user                      | Master Data         | ✅ Yes       |
+| client_id      | Text          | ID of the associated client or organization    | Master Data         | ✅ Yes       |
+| last_name      | Text          | User’s last name                               | Master Data         | ❌ No        |
+| first_name     | Text          | User’s first name                              | Master Data         | ❌ No        |
+| student_id     | Text          | System-generated or formal student ID          | Master Data         | ✅ Yes       |
 
-> 🖼️ **Insert your glossary/tool screenshot here**
+> 💡 Masking for sensitive fields like `email`, `id`, and `student_id` is done using star characters (`*****`) to protect personally identifiable information (PII).
 
-```markdown
-![Glossary Example](images/glossary.png)
-```
+![Data Masking Example](images/masking_example.png)
 
 ---
 
