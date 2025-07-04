@@ -63,12 +63,9 @@ A project focused on organizing and managing educational data for the LMS platfo
 
 ## 📊 Data Quality Dashboard
 
-Visualizes data issues such as missing values, duplicates, invalid formats, and overall compliance with quality rules.
+This dashboard presents an overview of the data quality checks performed on the LMS datasets, including profiling metrics such as missing values, duplicates, and rule violations.
 
-> 🖼️ **Insert your data quality dashboard screenshot here**
-
-![Data Quality Dashboard](https://raw.githubusercontent.com/SehamSalman/Stage-2/main/images/data_quality_dashboard.png)
-
+![Data Quality Dashboard](https://raw.githubusercontent.com/SehamSalman/Stage-2/main/images/Data%20quality%20Dashboard.png)
 
 ---
 
