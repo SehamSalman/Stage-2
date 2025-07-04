@@ -22,14 +22,42 @@ A project focused on organizing and managing educational data for the LMS platfo
   Built dashboards to monitor attendance, student status, data quality, and overall program performance.
 
 ---
-
 ## 🏗️ System Architecture
 
-> 🖼️ **Insert your system architecture diagram here**
+1. Data Ingestion
+   ├── PostgreSQL (LMS system)
+   ├── MySQL (Local stage 1)
+   └── CSV files (Attendance records)
 
-```markdown
-![Architecture Overview](images/architecture.png)
-````
+2. Centralized Storage
+   └── MySQL on AWS RDS
+
+3. Data Preparation & Cleaning
+   ├── Handle missing values
+   ├── Remove duplicates
+   ├── Standardize formats
+   └── Merge datasets
+
+4. Data Profiling & Quality Rules
+   ├── Null checks
+   ├── Field validation (e.g., email format)
+   └── Rule enforcement for critical fields
+
+5. Metadata Management
+   ├── Glossary creation
+   ├── Term classification (PII, CDE)
+   └── Lineage documentation
+
+6. Governance & PDPL Compliance
+   ├── Data masking (names, emails)
+   ├── Access control
+   └── User rights (edit/delete data)
+
+7. Dashboards & Analytics
+   ├── Student status tracking
+   ├── Attendance patterns
+   └── Program-level performance metrics
+
 
 ---
 
