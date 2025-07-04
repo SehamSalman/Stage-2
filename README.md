@@ -153,9 +153,7 @@ Seham Salman, Nawal Mohammed, Maha Sultan, Sarah Alzahrani, Mathyel Al Muteriy
 
 ---
 
-## 📎 Presentation File
+## 📎 Presentation Link
 
-[presentation/your-presentation.pdf](presentation/your-presentation.pdf)
-
-
+[📄 Capstone Project Presentation (PDF)](https://github.com/SehamSalman/Stage-2/blob/main/presentation/Capstone_2.pdf)
 
