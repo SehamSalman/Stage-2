@@ -95,19 +95,20 @@ The table below describes the key attributes from the `users` table, their busin
 
 ---
 
-## ✅ Data Quality Rules
+## ✅ Data Quality Rules & Observations
 
-Examples of applied data quality rules:
+To ensure data quality across the LMS datasets, we identified a set of **Critical Data Elements (CDEs)** and defined validation rules for each.
 
-* Mandatory field checks (e.g., student ID, attendance date)
-* Format validations (e.g., email, phone numbers)
-* Logic rules (e.g., graduation date should be after enrollment)
+The table summarizes:
 
-> 🖼️ **Insert your data rule list screenshot here**
+- The **CDE** (e.g., score, email, question_id)
+- The **validation rule** to ensure data integrity
+- Actual **observations** from the datasets (e.g., format issues, empty fields, inconsistent values)
+- The **table and column** where the issue was found
 
-```markdown
-![Data Quality Rules](images/data_quality_rules.png)
-```
+
+📄 **View the full list of rules and observations** here:  
+[🔗 Google Sheet – Data Quality Rules & Observations](https://docs.google.com/spreadsheets/d/13jJYKG20iVjhwGZUHFfKGo6n6o8t2R84CqljN4IIcow/edit?gid=1334388161#gid=1334388161)
 
 ---
 
